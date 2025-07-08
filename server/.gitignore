@@ -159,3 +159,5 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 >>>>>>> 172dbad95edbaca344d0d10f8f075d5392a23fc3
+.env
+node_modules/
