@@ -14,7 +14,7 @@ const allowedOrigins=['https://auth-client-xl2s.onrender.com']
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin:allowedOrigins,credentials:true}));
+app.use(cors({origin:allowedOrigins,credentials:true,allowedHeaders: ['Content-Type', 'Authorization']}));
 //API Endpoints
 app.get('/',(req,res)=>{
     res.send('API working...');
