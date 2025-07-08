@@ -9,6 +9,7 @@ export const AppContextProvider=(props)=>{
     const[userData,setUserData]=useState({});
     const getUserData=async()=>{
       try{
+         axios.defaults.withCredentials=true;
          const {data}=await axios.get(backendUrl+'/api/user/getUser');
          data.success?setUserData(data.userData):toast.error(data.message);
       }catch(error){
