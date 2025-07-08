@@ -3,7 +3,7 @@ require('dotenv').config();
 const userAuth=async(req,res,next)=>{
     const {token}=req.cookies;
     if(!token){
-       return res.json({success:false,message:"Not authorised login again!"});
+       return res.json({success:false,message:"Token not generated, login again!"});
     }
     try{
       const tokenDecode = jwt.verify(token,process.env.JWT_SECRET);
